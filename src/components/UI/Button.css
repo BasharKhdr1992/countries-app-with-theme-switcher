@@ -1,0 +1,22 @@
+.theme-btn {
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn-shadows {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-text {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .theme-btn {
+    width: 40% !important;
+  }
+}

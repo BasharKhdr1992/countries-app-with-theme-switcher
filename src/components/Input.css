@@ -1,0 +1,16 @@
+.form-input {
+  width: 30%;
+  margin: 12px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  color: hsl(0, 0%, 52%);
+}
+
+@media screen and (max-width: 768px) {
+  .form-input {
+    width: 100%;
+  }
+}

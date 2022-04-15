@@ -1,0 +1,40 @@
+.card {
+  width: 275px;
+  margin: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+.card-img {
+  width: 100%;
+  height: 175px;
+  border-bottom: 1px solid hsl(207, 26%, 17%);
+}
+
+.info-title,
+.info-text {
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.info-title {
+  font-weight: 900;
+}
+
+.info-text {
+  font-weight: 300;
+  color: hsl(0, 0%, 52%);
+}
+
+.info-container {
+  padding: 20px;
+}
+
+.info-line {
+  margin-bottom: 10px;
+}
