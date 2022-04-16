@@ -62,7 +62,7 @@ const Country = ({ darkMode }) => {
           );
         })
         .catch((err) => console.error(err));
-  }, [country]);
+  }, [country, borders]);
 
   const goBack = () => {
     navigate('/');
