@@ -26,10 +26,10 @@ const highlightText = (split, keyword, highlight_style) => {
   }
 };
 
-const HighlightedText = ({ country_name, keyword, color }) => {
+const HighlightedText = ({ country_name, keyword, color, darkMode }) => {
   const highlight_style = {
     fontWeight: 900,
-    backgroundColor: 'hsl(52, 100%, 62%)',
+    backgroundColor: darkMode ? 'hsl(216, 12%, 54%)' : 'hsl(52, 100%, 62%)',
   };
 
   const lowerCaseName = country_name.toLowerCase();

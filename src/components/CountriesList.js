@@ -8,6 +8,7 @@ const CountriesList = ({
   color,
   handleCountryClick,
   keyword,
+  darkMode,
 }) => {
   return (
     <div className="card-list">
@@ -17,6 +18,7 @@ const CountriesList = ({
             handleCountryClick={handleCountryClick}
             keyword={keyword}
             key={index}
+            darkMode={darkMode}
             country={country}
             bg={bg}
             color={color}
