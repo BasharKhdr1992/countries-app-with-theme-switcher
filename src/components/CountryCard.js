@@ -24,12 +24,16 @@ const CountryCard = ({
         alt={country.name['common']}
       />
       <div className="info-container">
-        <HighlightedText
-          color={color}
-          darkMode={darkMode}
-          country_name={country.name.common}
-          keyword={keyword}
-        />
+        {keyword.length === 0 ? (
+          <h3 className={color}>{country.name.common}</h3>
+        ) : (
+          <HighlightedText
+            color={color}
+            darkMode={darkMode}
+            country_name={country.name.common}
+            keyword={keyword}
+          />
+        )}
         <Info
           title="Population"
           color={color}
