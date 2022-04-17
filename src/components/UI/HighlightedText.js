@@ -4,15 +4,27 @@ const RenderText = ({ children, color }) => {
   return <h3 className={color}>{children}</h3>;
 };
 
-const highlightText = (split, keyword, highlight_style) => {
-  if (split.search(keyword) >= 0) {
-    let left, highlighted, right;
+const CamelCase = (word) => {
+  return word.substring(0, 1).toUpperCase() + word.substring(1);
+};
 
-    let startIndex = split.search(keyword);
+const highlightText = (split, keyword, highlight_style) => {
+  let startIndex;
+
+  startIndex = split.search(keyword);
+
+  if (startIndex >= 0) {
+    let left, highlighted, right;
 
     left = split.substring(0, startIndex);
     highlighted = split.substring(left.length, left.length + keyword.length);
     right = split.substring(left.length + keyword.length);
+
+    if (left.length > 0) {
+      left = CamelCase(left);
+    } else {
+      highlighted = CamelCase(highlighted);
+    }
 
     return (
       <span>
@@ -22,7 +34,7 @@ const highlightText = (split, keyword, highlight_style) => {
       </span>
     );
   } else {
-    return `${split} `;
+    return CamelCase(split);
   }
 };
 
