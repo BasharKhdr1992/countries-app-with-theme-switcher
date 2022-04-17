@@ -81,6 +81,7 @@ const Home = ({ darkMode }) => {
         <CountriesList
           handleCountryClick={handleCountryClick}
           countries={filteredCountries}
+          keyword={searchVal}
           bg={elementBg}
           color={color}
         />

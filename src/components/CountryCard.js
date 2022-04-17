@@ -1,8 +1,9 @@
 import React from 'react';
 import Info from '../components/Info';
 import './CountryCard.css';
+import HighlightedText from './UI/HighlightedText';
 
-const CountryCard = ({ bg, color, country, handleCountryClick }) => {
+const CountryCard = ({ bg, color, country, keyword, handleCountryClick }) => {
   return (
     <div
       className={`card ${bg}`}
@@ -16,7 +17,11 @@ const CountryCard = ({ bg, color, country, handleCountryClick }) => {
         alt={country.name['common']}
       />
       <div className="info-container">
-        <h3 className={color}>{country.name['common']}</h3>
+        <HighlightedText
+          color={color}
+          country_name={country.name.common}
+          keyword={keyword}
+        />
         <Info
           title="Population"
           color={color}
