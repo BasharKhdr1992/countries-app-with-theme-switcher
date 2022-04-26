@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Nunito Sans';
 }
 
 .dark-element {
@@ -28,16 +27,27 @@
   background-color: hsl(0, 0%, 100%);
 }
 
-.inputs-container {
+.wrapper {
   display: flex;
-  padding: 0 50px;
-  justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+.inputs-container {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.countries-container {
+  width: 80%;
+}
+
+@media screen and (max-width: 800px) {
   .inputs-container {
     flex-direction: column;
-    padding: 0 20px;
   }
 }

@@ -1,6 +1,6 @@
 .card {
-  width: 275px;
-  margin: 20px;
+  width: 30%;
+  margin-bottom: 20px;
   cursor: pointer;
   box-sizing: border-box;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2);
@@ -37,4 +37,10 @@ h3 {
 
 .info-line {
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .card {
+    width: 100%;
+  }
 }

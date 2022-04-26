@@ -68,7 +68,7 @@ const Home = ({ darkMode }) => {
   const filteredCountries = filterByName(filterByRegion(countries));
 
   return (
-    <div className={backGround}>
+    <div className={`wrapper ${backGround}`}>
       <div className="inputs-container">
         <Input
           searchVal={searchVal}
@@ -77,16 +77,18 @@ const Home = ({ darkMode }) => {
         />
         <DropDown handleChange={selectRegion} bg={elementBg} color={color} />
       </div>
-      {countries.length > 0 && (
-        <CountriesList
-          handleCountryClick={handleCountryClick}
-          countries={filteredCountries}
-          darkMode={darkMode}
-          keyword={searchVal}
-          bg={elementBg}
-          color={color}
-        />
-      )}
+      <div className="countries-container">
+        {countries.length > 0 && (
+          <CountriesList
+            handleCountryClick={handleCountryClick}
+            countries={filteredCountries}
+            darkMode={darkMode}
+            keyword={searchVal}
+            bg={elementBg}
+            color={color}
+          />
+        )}
+      </div>
     </div>
   );
 };
