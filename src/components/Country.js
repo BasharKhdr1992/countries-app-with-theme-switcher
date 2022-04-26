@@ -134,7 +134,7 @@ const Country = ({ darkMode }) => {
   };
 
   return (
-    <div className={`main ${backGround}`}>
+    <div className={`country-main ${backGround}`}>
       <div className="btn-section">
         <Button
           styles={{
